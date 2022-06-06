@@ -1,0 +1,26 @@
+@use './../abstracts/colors' as *;
+
+.text-dark{
+    color: $dark;
+}
+.text-blue{
+    color: $blue;
+}
+.text-white{
+    color: $white;
+}
+.text-gray{
+    color: $gray;
+}
+.bg-dark{
+    background-color: $dark;
+}
+.bg-blue{
+    background-color: $blue;
+}
+.bg-white{
+    background-color: $white;
+}
+.bg-gray{
+    background-color: $gray;
+}

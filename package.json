@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sass": "^1.52.2"
+  },
+  "name": "2-static",
+  "description": "Simple Web Page",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "watch:sass": "sass --watch ./sass/style.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek-Yesankar/2-static.git"
+  },
+  "author": "Abhishek Yesankar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishek-Yesankar/2-static/issues"
+  },
+  "homepage": "https://github.com/Abhishek-Yesankar/2-static#readme"
+}

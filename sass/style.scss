@@ -1,0 +1,17 @@
+@use './abstracts/fonts';
+@use './abstracts/colors' as *;
+
+*{
+    font-family: fonts.$font;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background: $dark;
+  color: $white;
+}
+
+section{
+    padding: 60px 10px;
+}
