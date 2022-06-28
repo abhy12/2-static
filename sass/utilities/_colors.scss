@@ -1,5 +1,8 @@
-@use './../abstracts/colors' as *;
-
+$white: #fff;
+$gray: #7D87AC;
+$blue: #0772FF;
+$dark: #040817; 
+$glitch-clr: #040817;
 .text-dark{
     color: $dark;
 }
