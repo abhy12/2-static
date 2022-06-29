@@ -8,11 +8,11 @@
     text-align: right;
 }
 .heading{
-    font-size: 4.2rem;
-    line-height: 1.5em;
+    font-size: 2.5rem;
+    line-height: 1.2em;
 }
 .sub-heading{
-    font-size: 3.7rem;
+    font-size: 2rem;
     line-height: 1.2em;
 }
 .text{
@@ -41,35 +41,17 @@
 .leading-none{
     line-height: 1;
 }
+.word-wrap{
+  word-wrap: break-word;
+}
 
-@keyframes text-glitch{
-  0%{
-    height: 100%;
-    background: var(--bg-red);
+@media( min-width: 768px )  {
+  .heading{
+    font-size: 4.2rem;
+    line-height: 1.5em;
   }
-
-  50%{
-    height: 60%;
-    background: var(--bg-red);
-  }
-  
-  55%{
-    height: 0%;
-    background: var(--bg-red);
-  }
-/*   75%{
-    height: 100%;
-    background: var(--bg-red);
-  } */
-    60%{
-    height: 60%;
-    background: var(--bg-red);
-  }
-  70%{
-    height: 100%;
-    background: var(--bg-red);
-  }
-  100%{
-    height: 0%;
+  .sub-heading{
+    font-size: 3.7rem;
+    line-height: 1.2em;
   }
 }

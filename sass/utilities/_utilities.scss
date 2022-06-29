@@ -7,3 +7,15 @@
 .flex{
     display: flex;
 }
+.column{
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.justify-space-around{
+   justify-content: space-around;
+}
+.justify-space-between{
+    justify-content: space-between;
+}

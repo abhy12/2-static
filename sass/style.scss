@@ -2,8 +2,9 @@
 @use './abstracts/fonts';
 @use './abstracts/grid';
 @use './utilities/colors' as *;
-@use './utilities/typography' as *;
 @use './utilities/sizing' as *;
+@use './utilities/utilities' as *;
+@use './utilities/typography' as *;
 
 *{
   font-family: fonts.$font;
@@ -20,40 +21,49 @@ section{
   padding: 60px 10px;
 }
 
+ul{
+  padding: 0;
+  list-style: none;
+}
+
 //intro section text offset 
 $text-offset: 40%;
-$head-min-height: 4.2rem;
+// $head-min-height: 4.2rem;
+$head-min-height: 1em;
+
+.intro{
+  .info{
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-top: 40px;
+    font-size: .8rem;
+    font-weight: 300;
+    & > li:not(:last-child){
+      margin-bottom: 8px;
+    }
+  }
+  h1{
+    margin-bottom: 15px;
+  }
+}
 
 @media( min-width: 768px )  {
   section{
-      padding: 100px 40px;
+      padding: 100px 40px 40px 40px;
       background: radial-gradient( circle at top left,  lighten( $dark, 6% ) 10%, $dark 25%, $dark );
   }
   .intro{
       min-height: 100vh;
+      h1{
+        margin-bottom: 0;
+        line-height: 1;
+      }
       h2{
         width: calc(100% - $text-offset);
         transform: translateX( $text-offset );
      }
-     .intro-head{
-      min-height: 4.2rem;
-      font-size: 4.2rem;
-     }
-      h1{
-        position: relative;
-        font-size: 1em;
-        overflow: hidden;
-        animation: text-glitch 1s infinite;
-        // &::after{
-        //   // content: '';
-        //    position: absolute;
-        //    left: 0;
-        //    right: 0;
-        //    top: 0;
-        //    bottom: 0;
-        //   animation: text-glitch 1s infinite;
-        // }
-     }
+    
   }
   .intro .intro-text-left{
       margin-left: -$text-offset;
@@ -62,36 +72,43 @@ $head-min-height: 4.2rem;
 
 @keyframes text-glitch{
   0%{
+    ///height 100%
     height: $head-min-height;
     background: transparent;
   }
 
-  50%{
+  30%{
+    //0
+    //height 40%
     // height: 60%;
-    height: calc( $head-min-height / 2.2 );
+    height: 0em;
     background: transparent;
   }
   
   55%{
+    //height 0%
     // height: 0%;
-    height: 0px;
+    height: calc( $head-min-height / 1.2 );
     background: transparent;
   }
-/*   75%{
-    height: 100%;
+  75%{
+    height: 0em;
     background: transparent;
-  } */
+  } 
     60%{
+    //height 60%
     // height: 60%;
-    height: calc( $head-min-height / 2.2 );
+    height: 0em;
     background: transparent;
   }
   70%{
-    // height: 100%;
-    height: $head-min-height;
-    background: transparent;
+    // //height 100%
+    // // height: 100%;
+    // height: $head-min-height;
+    // background: transparent;
   }
   100%{
-    height: 0%;
+   //height 100%
+    height: $head-min-height;
   }
 }
