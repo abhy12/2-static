@@ -414,6 +414,7 @@ template {
 .text-underline {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
 }
 
 .font-normal {
@@ -483,6 +484,23 @@ ul {
 }
 .intro h1 {
   margin-bottom: 15px;
+  max-width: max-content;
+  position: relative;
+}
+.intro .text-1 {
+  position: relative;
+  visibility: hidden;
+}
+.intro .text-1::after {
+  content: "MO";
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: visible;
+  overflow: clip;
+  animation: text-glitch 1s ease-in infinite;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
 }
 
 @media (min-width: 768px) {

@@ -45,6 +45,23 @@ $head-min-height: 1em;
   }
   h1{
     margin-bottom: 15px;
+    max-width: max-content;
+    position: relative;
+  }
+  .text-1{
+    position: relative;
+    visibility: hidden;
+    &::after{
+      content: 'MO';
+      position: absolute;
+      left: 0;
+      right: 0;
+      visibility: visible;
+      overflow: clip;
+      animation: text-glitch 1s ease-in infinite;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+    }
   }
 }
 
