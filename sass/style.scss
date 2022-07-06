@@ -27,15 +27,15 @@ ul{
 }
 
 //intro section text offset 
-$text-offset: 40%;
-// $head-min-height: 4.2rem;
-$head-min-height: 1em;
+$text-offset: 45%;
+
 
 .intro{
   .info{
-    width: 100%;
+    width: max-content;
     max-width: 300px;
     margin-left: auto;
+    margin-right: 10%;
     margin-top: 40px;
     font-size: .8rem;
     font-weight: 300;
@@ -45,24 +45,34 @@ $head-min-height: 1em;
   }
   h1{
     margin-bottom: 15px;
-    max-width: max-content;
+    max-width: max-content; 
     position: relative;
   }
-  .text-1{
+  .text-animate{
     position: relative;
     visibility: hidden;
     &::after{
-      content: 'MO';
       position: absolute;
       left: 0;
       right: 0;
       visibility: visible;
       overflow: clip;
-      animation: text-glitch 1s ease-in infinite;
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
     }
   }
+    .text-1::after{
+      content: 'MO';
+      animation: text-glitch-full 2s ease-in infinite;
+    }
+    .text-2::after{
+        content: 'DE';
+        animation: text-glitch-half 2s ease-in infinite;
+    }
+    .text-3::after{
+      content: 'EC';
+      animation: text-glitch-full 2s ease-in infinite;
+    }
 }
 
 @media( min-width: 768px )  {
@@ -80,50 +90,55 @@ $head-min-height: 1em;
         width: calc(100% - $text-offset);
         transform: translateX( $text-offset );
      }
-    
+    & .info{
+      margin-right: 25%;
+    }
   }
   .intro .intro-text-left{
       margin-left: -$text-offset;
   }
 }
 
-@keyframes text-glitch{
-  0%{
-    ///height 100%
-    height: $head-min-height;
-    background: transparent;
-  }
+// $head-min-height: 4.2rem;
+$head-min-height: 1em;
 
-  30%{
-    //0
-    //height 40%
-    // height: 60%;
+@keyframes text-glitch-full{
+  0%{
     height: 0em;
-    background: transparent;
+  }
+  10%{
+    height: calc( $head-min-height / 1.1 );
+  }
+  15%{
+    height: 0em;
+  }
+  25%{
+    height: $head-min-height;
+  }
+  50%{
+    height: $head-min-height;
   }
   
-  55%{
-    //height 0%
-    // height: 0%;
-    height: calc( $head-min-height / 1.2 );
-    background: transparent;
+  100%{
+   //height 100%
+    height: $head-min-height;
   }
-  75%{
-    height: 0em;
-    background: transparent;
-  } 
-    60%{
-    //height 60%
-    // height: 60%;
-    height: 0em;
-    background: transparent;
+}
+
+@keyframes text-glitch-half{
+  0%{
+    height: calc( $head-min-height / 1.7 );
   }
-  70%{
-    // //height 100%
-    // // height: 100%;
-    // height: $head-min-height;
-    // background: transparent;
+  15%{
+    height: $head-min-height / 1 ;
   }
+  25%{
+    height: $head-min-height;
+  }
+  50%{
+    height: $head-min-height;
+  }
+  
   100%{
    //height 100%
     height: $head-min-height;

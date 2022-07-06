@@ -321,6 +321,10 @@ template {
   color: #7D87AC;
 }
 
+.text-transparent {
+  color: transparent;
+}
+
 .bg-dark {
   background-color: #040817;
 }
@@ -472,9 +476,10 @@ ul {
 }
 
 .intro .info {
-  width: 100%;
+  width: max-content;
   max-width: 300px;
   margin-left: auto;
+  margin-right: 10%;
   margin-top: 40px;
   font-size: 0.8rem;
   font-weight: 300;
@@ -487,20 +492,30 @@ ul {
   max-width: max-content;
   position: relative;
 }
-.intro .text-1 {
+.intro .text-animate {
   position: relative;
   visibility: hidden;
 }
-.intro .text-1::after {
-  content: "MO";
+.intro .text-animate::after {
   position: absolute;
   left: 0;
   right: 0;
   visibility: visible;
   overflow: clip;
-  animation: text-glitch 1s ease-in infinite;
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
+}
+.intro .text-1::after {
+  content: "MO";
+  animation: text-glitch-full 2s ease-in infinite;
+}
+.intro .text-2::after {
+  content: "DE";
+  animation: text-glitch-half 2s ease-in infinite;
+}
+.intro .text-3::after {
+  content: "EC";
+  animation: text-glitch-full 2s ease-in infinite;
 }
 
 @media (min-width: 768px) {
@@ -516,33 +531,48 @@ ul {
     line-height: 1;
   }
   .intro h2 {
-    width: 60%;
-    transform: translateX(40%);
+    width: 55%;
+    transform: translateX(45%);
+  }
+  .intro .info {
+    margin-right: 25%;
   }
   .intro .intro-text-left {
-    margin-left: -40%;
+    margin-left: -45%;
   }
 }
-@keyframes text-glitch {
+@keyframes text-glitch-full {
   0% {
+    height: 0em;
+  }
+  10% {
+    height: 0.9090909091em;
+  }
+  15% {
+    height: 0em;
+  }
+  25% {
     height: 1em;
-    background: transparent;
   }
-  30% {
-    height: 0em;
-    background: transparent;
+  50% {
+    height: 1em;
   }
-  55% {
-    height: 0.8333333333em;
-    background: transparent;
+  100% {
+    height: 1em;
   }
-  75% {
-    height: 0em;
-    background: transparent;
+}
+@keyframes text-glitch-half {
+  0% {
+    height: 0.5882352941em;
   }
-  60% {
-    height: 0em;
-    background: transparent;
+  15% {
+    height: 1em;
+  }
+  25% {
+    height: 1em;
+  }
+  50% {
+    height: 1em;
   }
   100% {
     height: 1em;
