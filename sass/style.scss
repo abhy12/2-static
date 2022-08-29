@@ -5,6 +5,7 @@
 @use './utilities/sizing' as *;
 @use './utilities/utilities' as *;
 @use './utilities/typography' as *;
+@use './components/home-section/spinning-image.scss' as *;
 
 *{
   font-family: fonts.$font;
@@ -31,6 +32,7 @@ $text-offset: 45%;
 
 
 .intro{
+  min-height: 70vh;
   .info{
     width: max-content;
     max-width: 300px;
@@ -130,7 +132,7 @@ $head-min-height: 1em;
     height: calc( $head-min-height / 1.7 );
   }
   15%{
-    height: $head-min-height / 1 ;
+    height:  $head-min-height;
   }
   25%{
     height: $head-min-height;

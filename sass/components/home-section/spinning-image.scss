@@ -1,0 +1,23 @@
+.intro-image{
+    width: calc( 100% - ( 20px * 2 ) );
+    max-width: 550px;
+    object-fit: contain;
+    animation: 60s linear infinite spinning;
+    left: 20px;
+    right: 20px;
+}
+@media ( min-width: 768px ) {
+    .intro-image{
+        left: 15%;
+        top: 12%;
+    }
+}
+
+@keyframes spinning {
+    0%{
+     transform: rotate( 0deg );
+    }
+    100%{
+     transform: rotate( 360deg );
+    }
+}

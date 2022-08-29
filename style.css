@@ -384,6 +384,26 @@ template {
   justify-content: space-between;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .text-left {
   text-align: left;
 }
@@ -455,6 +475,29 @@ template {
     line-height: 1.2em;
   }
 }
+.intro-image {
+  width: calc(100% - 40px);
+  max-width: 550px;
+  object-fit: contain;
+  animation: 60s linear infinite spinning;
+  left: 20px;
+  right: 20px;
+}
+
+@media (min-width: 768px) {
+  .intro-image {
+    left: 15%;
+    top: 12%;
+  }
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -475,6 +518,9 @@ ul {
   list-style: none;
 }
 
+.intro {
+  min-height: 70vh;
+}
 .intro .info {
   width: max-content;
   max-width: 300px;
