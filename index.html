@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>2 Static</title>
 </head>
 
 <body>
     <section class="intro flex relative overflow-hidden">
-        <img class="absolute z-index-1 intro-image" src="./assets/svg/Spiral-circle.svg" >
+        <img class="absolute z-index-1 intro-image" src="./assets/svg/Spiral-circle.svg">
         <div class="container flex column justify-space-between z-index-2">
             <div class="intro-head">
                 <h1 class="text-blue text-underline heading font-normal word-wrap">MODERN TECHNOLOGIES</h1>
@@ -23,11 +23,40 @@
                     </br><span class="intro-text-left">devices for your home.</span></h2>
             </div>
             <ul class="info">
-                <li>Mobile</li>
+                <li><a href="#section-2">Mobile</a></li>
                 <li>Scanner</li>
                 <li>Documents</li>
             </ul>
         </div>
+    </section>
+    <section id="section-2">
+      <div class="container flex wrap">
+        <div class="info">
+            <dl>
+                <dt>Main</dt>
+                <dd class="text-gray">Files Screen</dd>
+            </dl>
+        </div>
+        <div class="grow-1 flex justify-center align-center">
+            <div class="image-section relative">
+                <p class="image-info left"><span class="visually-hidden">UX</span>
+                    <svg aria-hidden="true" id="lockup-headline-mask" class="headline lockup-headline-mask visually-hidden">
+                        <clipPath id="lockup-headline-mask-path-1">
+                          <text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0em" dy="0.125em">UX</text>
+                        </clipPath>
+                      </svg>
+                </p>
+                <img src="./assets/images/2-section-image.png" alt="Mobile File Manager Main Menu">
+                <p class="image-info right"><span class="visually-hidden">UI</span>
+                    <svg aria-hidden="true" id="lockup-headline-mask" class="headline lockup-headline-mask visually-hidden">
+                        <clipPath id="lockup-headline-mask-path-2">
+                          <text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0em" dy="0.125em">UI</text>
+                        </clipPath>
+                      </svg>
+                </p>
+            </div>
+        </div>
+      </div>
     </section>
 </body>
 

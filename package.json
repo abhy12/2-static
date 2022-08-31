@@ -8,7 +8,7 @@
   "main": "index.html",
   "devDependencies": {},
   "scripts": {
-    "watch:sass": "sass --watch ./sass/style.scss ./style.css"
+    "start": "sass --watch ./sass/style.scss ./style.css"
   },
   "repository": {
     "type": "git",
