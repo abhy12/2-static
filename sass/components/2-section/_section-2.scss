@@ -3,17 +3,19 @@
   max-width: 150px;
 }
 .image-section img{
+  width: 100%;
   position: relative;
   z-index: 2;
 }
 .image-section .image-info{
-   font-size: 12rem;
-   font-weight: 900;
-   position: absolute;
+  display: none;
+  font-size: calc(15vw + 1.2rem);
+  font-weight: 900;
+  position: absolute;
   //  transform: translateY( -50% );
-   backdrop-filter: blur(6px);
-   height: 1em;
-   width: 100%;
+  backdrop-filter: blur(6px);
+  height: 1em;
+  width: 100%;
 }
 .image-section .image-info.left{
     bottom: 15%;
@@ -54,5 +56,15 @@
 
   100%{
     transform: translateY(30%);
+  }
+}
+@media screen and ( min-width: 700px ) {
+  .image-section .image-info{
+    display: block;
+  }
+}
+@media (min-width: 800px ) {
+  .image-section .image-info{
+    font-size: 12rem;
   }
 }
